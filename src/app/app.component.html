@@ -1,0 +1,180 @@
+
+<div class="cont_wrap">
+  <!-- add-task -->
+  <div class="wraps" [ngClass]="{wrapActive:isOpen}">
+    <div class="taskAdd" [ngClass]="{active:isOpen}">
+        <div class="nav_wrap">
+            <span>Задача</span>
+            <div class="icons">
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.75 5.4755C16.0216 5.54206 16.2254 5.67518 16.2933 5.94141C16.3612 6.14109 16.2933 6.40733 16.0895 6.54044L12.9654 9.53559L13.7125 13.7954C13.7804 14.0616 13.6445 14.3278 13.4408 14.4609C13.305 14.5275 13.1691 14.5941 13.0333 14.5941H12.6937L8.82247 12.5973L4.95122 14.5941C4.67955 14.7272 4.40789 14.6606 4.20414 14.5275C4.00039 14.3944 3.86456 14.1282 3.93247 13.8619L4.67955 9.60215L1.55539 6.607C1.35164 6.47389 1.28372 6.20765 1.35164 5.94141C1.48747 5.67518 1.69122 5.4755 1.96289 5.4755L6.24164 4.80991L8.21122 1.01606C8.41497 0.550148 9.22997 0.550148 9.43372 1.01606L11.4033 4.87647L15.75 5.4755ZM11.5391 9.46903C11.5391 9.26936 11.607 9.06968 11.7429 8.87L14.1879 6.54044L10.86 6.07453C10.5883 6.07453 10.3846 5.94142 10.3166 5.74174L8.82247 2.81315L7.3283 5.8083C7.19247 5.94142 6.98872 6.14109 6.78497 6.14109L3.45706 6.607L5.90205 8.87C6.03789 9.06968 6.1058 9.26936 6.1058 9.46903L5.49455 12.7304L8.48288 11.1996C8.68663 11.0664 8.89038 11.0664 9.09413 11.1996L12.0825 12.7304L11.5391 9.46903Z" fill="black"/>
+                    <mask id="mask0_11_3072" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="0" width="16" height="15">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.75 5.4755C16.0216 5.54206 16.2254 5.67518 16.2933 5.94141C16.3612 6.14109 16.2933 6.40733 16.0895 6.54044L12.9654 9.53559L13.7125 13.7954C13.7804 14.0616 13.6445 14.3278 13.4408 14.4609C13.305 14.5275 13.1691 14.5941 13.0333 14.5941H12.6937L8.82247 12.5973L4.95122 14.5941C4.67955 14.7272 4.40789 14.6606 4.20414 14.5275C4.00039 14.3944 3.86456 14.1282 3.93247 13.8619L4.67955 9.60215L1.55539 6.607C1.35164 6.47389 1.28372 6.20765 1.35164 5.94141C1.48747 5.67518 1.69122 5.4755 1.96289 5.4755L6.24164 4.80991L8.21122 1.01606C8.41497 0.550148 9.22997 0.550148 9.43372 1.01606L11.4033 4.87647L15.75 5.4755ZM11.5391 9.46903C11.5391 9.26936 11.607 9.06968 11.7429 8.87L14.1879 6.54044L10.86 6.07453C10.5883 6.07453 10.3846 5.94142 10.3166 5.74174L8.82247 2.81315L7.3283 5.8083C7.19247 5.94142 6.98872 6.14109 6.78497 6.14109L3.45706 6.607L5.90205 8.87C6.03789 9.06968 6.1058 9.26936 6.1058 9.46903L5.49455 12.7304L8.48288 11.1996C8.68663 11.0664 8.89038 11.0664 9.09413 11.1996L12.0825 12.7304L11.5391 9.46903Z" fill="white"/>
+                    </mask>
+                    <g mask="url(#mask0_11_3072)">
+                    <rect x="0.644531" width="16.3556" height="16" fill="#D0D2D6"/>
+                    </g>
+                    </svg>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" (click)="taskModuleOpen()">
+                        <path d="M15.5832 14.4166C15.9165 14.75 15.9165 15.25 15.5832 15.5833C15.4165 15.75 15.2498 15.8333 14.9998 15.8333C14.7498 15.8333 14.5832 15.75 14.4165 15.5833L9.99984 11.1666L5.58317 15.5833C5.4165 15.75 5.24984 15.8333 4.99984 15.8333C4.74984 15.8333 4.58317 15.75 4.4165 15.5833C4.08317 15.25 4.08317 14.75 4.4165 14.4166L8.83317 9.99996L4.4165 5.58329C4.08317 5.24996 4.08317 4.74996 4.4165 4.41663C4.74984 4.08329 5.24984 4.08329 5.58317 4.41663L9.99984 8.83329L14.4165 4.41663C14.7498 4.08329 15.2498 4.08329 15.5832 4.41663C15.9165 4.74996 15.9165 5.24996 15.5832 5.58329L11.1665 9.99996L15.5832 14.4166Z" fill="black"/>
+                        <mask id="mask0_11_3073" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="4" y="4" width="12" height="12">
+                        <path d="M15.5832 14.4166C15.9165 14.75 15.9165 15.25 15.5832 15.5833C15.4165 15.75 15.2498 15.8333 14.9998 15.8333C14.7498 15.8333 14.5832 15.75 14.4165 15.5833L9.99984 11.1666L5.58317 15.5833C5.4165 15.75 5.24984 15.8333 4.99984 15.8333C4.74984 15.8333 4.58317 15.75 4.4165 15.5833C4.08317 15.25 4.08317 14.75 4.4165 14.4166L8.83317 9.99996L4.4165 5.58329C4.08317 5.24996 4.08317 4.74996 4.4165 4.41663C4.74984 4.08329 5.24984 4.08329 5.58317 4.41663L9.99984 8.83329L14.4165 4.41663C14.7498 4.08329 15.2498 4.08329 15.5832 4.41663C15.9165 4.74996 15.9165 5.24996 15.5832 5.58329L11.1665 9.99996L15.5832 14.4166Z" fill="white"/>
+                        </mask>
+                        <g mask="url(#mask0_11_3073)">
+                        <rect width="20" height="20" fill="#B4B7BD"/>
+                        </g>
+                        </svg>
+            </div>
+                    
+        </div>
+        <div class="inputs">
+            <div class="wrapper">
+                <p>Название</p>
+                <input type="text" placeholder="Название задачи"  [(ngModel)]="tsksObj.name">
+            </div>
+            <div class="wrapper">
+                <p>Дата завершения задачи</p>
+                <input type="text" placeholder="Название задачи" [(ngModel)]="tsksObj.dueDate">
+            </div>
+            <div class="wrapper check">
+                <input type="checkbox" name="important" id="important" class="checker"  [(ngModel)]="tsksObj.isImportant">    
+                <label for="important"></label><span>Важная задача</span>
+            </div>
+            <div class="wrappar">
+                <p>Дата и время окончания</p>
+                <input type="date" placeholder="Дата и время" [(ngModel)]="tsksObj.dueDate">
+            </div>
+            <div class="wrapper desc">
+                <p>Описание задачи</p>
+                <textarea name="" id="" cols="30" rows="10" placeholder="Название задачи" [(ngModel)]="tsksObj.description"></textarea>
+            </div>
+            <div class="wrapper">
+                <p>Тэги</p>
+                <div class="grid">
+                    <div class="wrapper check">
+                        <input type="checkbox" name="prod" id="prod"  class="checker" formControlName="prod" [(ngModel)]="tsksObj.tags[3].isTrue"> 
+                        <label for="prod"></label><span>Продуктивность</span>
+                    </div>
+                    <div class="wrapper check">
+                        <input type="checkbox" name="obr" id="obr" class="checker" formControlName="educ" [(ngModel)]="tsksObj.tags[0].isTrue"> 
+                        <label for="obr"></label><span>Образование</span>
+                    </div>
+                    <div class="wrapper check">
+                        <input type="checkbox" name="health" formControlName="heal" id="health" class="checker" [(ngModel)]="tsksObj.tags[1].isTrue"> 
+                        <label for="health"></label><span>Здоровье</span>
+                    </div>
+                    <div class="wrapper check">
+                        <input type="checkbox" name="fast" id="fast" class="checker" formControlName="fast"  [(ngModel)]="tsksObj.tags[2].isTrue"> 
+                        <label for="fast"></label><span>Срочно</span>
+                    </div>
+                </div>
+
+
+
+            </div>  
+            <div class="wrapper">  
+                <div class="buttons">
+                    <button class="addbtn" (click)="setItem()">Добавить</button>
+                    <button class="trs_bnt" (click)="removeData()">Удалить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- add-task -->
+  <div class="container" [class.open]="isFull">
+
+    <section class="sidebar">
+      <button class="new_task_btn" (click)="newTask()">Новая задача</button>
+      <div class='sidebar_units_wrap'>
+        <div *ngFor="let unit of units; let i = index" class="sidebar_units" [class.active_su]="unit.class" (click)="chooseTitle(unit)" (click)="toggleActive(unit)" (click)="unit.nameUnit == 'Мои задачи'?filterTasks('all'):''" (click)="unit.nameUnit === 'Выполненные'?filterTasks('done'):''" (click)="unit.nameUnit==='Важные'?filterTasks('important'):''" (click)="unit.nameUnit==='Удаленные'?filterTasks('deleted'):''">
+          <img [src]="unit.svg" alt=""style>
+        <span>{{unit.nameUnit}}</span>
+        </div>
+      </div>
+      <!-- <app-tags></app-tags> -->
+      <div class="tags_wrap">
+        <span>Тэги</span>
+        <ul class="tags_list">
+          <li *ngFor="let item of tags, let i = index" class="tags_item" (click)="filterTags(item.tagName, item.class)" [class.active_tl]="item.class" (click)="toggleTags(item)">
+            <div class="tag_dot" style.backgroundColor = {{item.color}}></div>
+            {{item.tagName}}</li>
+        </ul>
+      </div>
+    </section>
+    <section class="main">
+      <div class="more" (click)="openCont()" [class.showMore]="isShow">
+        <span *ngIf="!isFull">Показать еще {{val()}} {{Showfunc()}}</span>
+        <span *ngIf="isFull">Скрыть</span>
+      </div>
+      <div class="search">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9 11.85L16.275 15.225C16.575 15.525 16.575 15.975 16.275 16.275C16.125 16.425 15.9 16.5 15.75 16.5C15.6 16.5 15.375 16.425 15.225 16.275L11.85 12.9C10.725 13.725 9.375 14.25 7.875 14.25C4.35 14.25 1.5 11.4 1.5 7.875C1.5 4.35 4.35 1.5 7.875 1.5C11.4 1.5 14.25 4.35 14.25 7.875C14.25 9.375 13.725 10.8 12.9 11.85ZM7.875 3C5.175 3 3 5.175 3 7.875C3 10.575 5.175 12.75 7.875 12.75C9.225 12.75 10.425 12.225 11.325 11.325C12.225 10.425 12.75 9.225 12.75 7.875C12.75 5.175 10.575 3 7.875 3Z" fill="black"/>
+          <mask id="mask0_26_2677" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9 11.85L16.275 15.225C16.575 15.525 16.575 15.975 16.275 16.275C16.125 16.425 15.9 16.5 15.75 16.5C15.6 16.5 15.375 16.425 15.225 16.275L11.85 12.9C10.725 13.725 9.375 14.25 7.875 14.25C4.35 14.25 1.5 11.4 1.5 7.875C1.5 4.35 4.35 1.5 7.875 1.5C11.4 1.5 14.25 4.35 14.25 7.875C14.25 9.375 13.725 10.8 12.9 11.85ZM7.875 3C5.175 3 3 5.175 3 7.875C3 10.575 5.175 12.75 7.875 12.75C9.225 12.75 10.425 12.225 11.325 11.325C12.225 10.425 12.75 9.225 12.75 7.875C12.75 5.175 10.575 3 7.875 3Z" fill="white"/>
+          </mask>
+          <g mask="url(#mask0_26_2677)">
+          <rect width="18" height="18" fill="#B4B7BD"/>
+          </g>
+          </svg>          
+        <input type="text" name="" id="" placeholder="Поиск">
+      </div>
+      <div class="task_name">
+        <h1>{{title}}</h1>
+      </div>
+      <div class="tasks_ul">
+        <!-- app-task -->
+        <div class="task_wrap" cdkDropList (cdkDropListDropped)="drop($event)">
+          <div class="wrapar" *ngFor="let task of tasksSignal();  let id = index" cdkDrag>
+                  <input type="checkbox" [name]="task.name" [id]="id" class="checker" [(ngModel)]="task.isCompleted" (click)="isCompleted(task, task.name) ">
+                  <label [for]="id"></label>   
+              <span class="task_desk">{{task.name}}</span>
+              <div class="lastElems">
+                  <div class="tages_wrap" *ngFor="let tag of task.tags" [style.display]="tag.isTrue?flex:none">
+                      <span class="tages" [style.color]="tag.color" [style.display]="tag.isTrue? flex : none"  [ngClass]="{showCart:!tag.isTrue}" [style.background-color]="tag.bgColor">{{tag.content}}</span></div>        
+                  <div class="date">{{task.dueDate}}</div>
+                  <div >
+                    <div *ngIf="!isDel" (click)="moveToDeleted(task)">
+                      <svg  class="delete" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5001 4.66666H14.1667V3.83333C14.1667 2.41666 13.0834 1.33333 11.6667 1.33333H8.33342C6.91675 1.33333 5.83342 2.41666 5.83342 3.83333V4.66666H2.50008C2.00008 4.66666 1.66675 4.99999 1.66675 5.49999C1.66675 5.99999 2.00008 6.33333 2.50008 6.33333H3.33341V17.1667C3.33341 18.5833 4.41675 19.6667 5.83342 19.6667H14.1667C15.5834 19.6667 16.6667 18.5833 16.6667 17.1667V6.33333H17.5001C18.0001 6.33333 18.3334 5.99999 18.3334 5.49999C18.3334 4.99999 18.0001 4.66666 17.5001 4.66666ZM7.50008 3.83333C7.50008 3.33333 7.83342 2.99999 8.33342 2.99999H11.6667C12.1667 2.99999 12.5001 3.33333 12.5001 3.83333V4.66666H7.50008V3.83333ZM14.1667 18C14.6667 18 15.0001 17.6667 15.0001 17.1667V6.33333H5.00008V17.1667C5.00008 17.6667 5.33341 18 5.83342 18H14.1667Z" fill="black"/>
+                          <mask id="mask0_10_1668" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="1" y="1" width="18" height="19">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5001 4.66666H14.1667V3.83333C14.1667 2.41666 13.0834 1.33333 11.6667 1.33333H8.33342C6.91675 1.33333 5.83342 2.41666 5.83342 3.83333V4.66666H2.50008C2.00008 4.66666 1.66675 4.99999 1.66675 5.49999C1.66675 5.99999 2.00008 6.33333 2.50008 6.33333H3.33341V17.1667C3.33341 18.5833 4.41675 19.6667 5.83342 19.6667H14.1667C15.5834 19.6667 16.6667 18.5833 16.6667 17.1667V6.33333H17.5001C18.0001 6.33333 18.3334 5.99999 18.3334 5.49999C18.3334 4.99999 18.0001 4.66666 17.5001 4.66666ZM7.50008 3.83333C7.50008 3.33333 7.83342 2.99999 8.33342 2.99999H11.6667C12.1667 2.99999 12.5001 3.33333 12.5001 3.83333V4.66666H7.50008V3.83333ZM14.1667 18C14.6667 18 15.0001 17.6667 15.0001 17.1667V6.33333H5.00008V17.1667C5.00008 17.6667 5.33341 18 5.83342 18H14.1667Z" fill="white"/>
+                          </mask>
+                          <g mask="url(#mask0_10_1668)">
+                          <rect y="0.5" width="20" height="20" fill="#BDBDBD"/>
+                          </g>
+                          </svg>        
+                    </div>
+                    <div *ngIf="isDel" (click)="reviveTask(task)">
+                      <svg class="delete" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.4761 18.3325C12.5551 18.6663 11.6341 18.8333 10.7132 18.8333C7.28039 18.8333 4.01508 16.663 2.84292 13.2407C2.67547 12.8233 2.92664 12.3225 3.34527 12.1555C3.7639 11.9886 4.26626 12.239 4.43371 12.6564C5.6896 16.1622 9.45726 17.9986 12.9738 16.7465C16.4902 15.4944 18.3322 11.7382 17.0763 8.23236C16.4902 6.56292 15.2344 5.22737 13.6436 4.39265C12.0528 3.6414 10.2108 3.55793 8.53628 4.14223C7.61529 4.47612 6.69431 4.97695 6.0245 5.7282L3.59645 7.98194H6.52686C7.02921 7.98194 7.36412 8.31583 7.36412 8.81666C7.36412 9.31749 7.02921 9.65138 6.52686 9.65138H1.5033C1.41958 9.65138 1.33585 9.65138 1.33585 9.65138H1.25213L1.1684 9.56791C1.08467 9.56791 1.08467 9.48444 1.00095 9.48444C1.00095 9.48444 1.00095 9.40096 0.917222 9.40096C0.917222 9.31749 0.833496 9.31749 0.833496 9.23402C0.833496 9.15055 0.833496 9.06708 0.833496 9.06708V8.9836V3.80834C0.833496 3.30751 1.1684 2.97363 1.67076 2.97363C2.17311 2.97363 2.50801 3.30751 2.50801 3.80834V6.89681L5.01979 4.55959C5.85705 3.72487 6.94549 3.0571 8.11765 2.63974C10.2108 1.88849 12.4714 2.05543 14.4808 2.97363C16.4902 3.97529 17.9973 5.64473 18.7508 7.73153C20.1742 12.0721 17.8299 16.83 13.4761 18.3325Z" fill="black"/>
+                        <mask id="mask0_14_1414" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="2" width="20" height="17">
+                        <path d="M13.4761 18.3325C12.5551 18.6663 11.6341 18.8333 10.7132 18.8333C7.28039 18.8333 4.01508 16.663 2.84292 13.2407C2.67547 12.8233 2.92664 12.3225 3.34527 12.1555C3.7639 11.9886 4.26626 12.239 4.43371 12.6564C5.6896 16.1622 9.45726 17.9986 12.9738 16.7465C16.4902 15.4944 18.3322 11.7382 17.0763 8.23236C16.4902 6.56292 15.2344 5.22737 13.6436 4.39265C12.0528 3.6414 10.2108 3.55793 8.53628 4.14223C7.61529 4.47612 6.69431 4.97695 6.0245 5.7282L3.59645 7.98194H6.52686C7.02921 7.98194 7.36412 8.31583 7.36412 8.81666C7.36412 9.31749 7.02921 9.65138 6.52686 9.65138H1.5033C1.41958 9.65138 1.33585 9.65138 1.33585 9.65138H1.25213L1.1684 9.56791C1.08467 9.56791 1.08467 9.48444 1.00095 9.48444C1.00095 9.48444 1.00095 9.40096 0.917222 9.40096C0.917222 9.31749 0.833496 9.31749 0.833496 9.23402C0.833496 9.15055 0.833496 9.06708 0.833496 9.06708V8.9836V3.80834C0.833496 3.30751 1.1684 2.97363 1.67076 2.97363C2.17311 2.97363 2.50801 3.30751 2.50801 3.80834V6.89681L5.01979 4.55959C5.85705 3.72487 6.94549 3.0571 8.11765 2.63974C10.2108 1.88849 12.4714 2.05543 14.4808 2.97363C16.4902 3.97529 17.9973 5.64473 18.7508 7.73153C20.1742 12.0721 17.8299 16.83 13.4761 18.3325Z" fill="white"/>
+                        </mask>
+                        <g mask="url(#mask0_14_1414)">
+                        <rect y="0.5" width="20" height="20" fill="#B4B7BD"/>
+                        </g>
+                        </svg>
+                        
+                    </div>
+                  </div>
+                  <div cdkDragHandle>
+                      <svg class="drag" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M6.66667 6.33333C7.58333 6.33333 8.33333 5.58333 8.33333 4.66667C8.33333 3.75 7.58333 3 6.66667 3C5.75 3 5 3.75 5 4.66667C5 5.58333 5.75 6.33333 6.66667 6.33333ZM8.33333 10.5C8.33333 11.4167 7.58333 12.1667 6.66667 12.1667C5.75 12.1667 5 11.4167 5 10.5C5 9.58333 5.75 8.83333 6.66667 8.83333C7.58333 8.83333 8.33333 9.58333 8.33333 10.5ZM5 16.3333C5 15.4167 5.75 14.6667 6.66667 14.6667C7.58333 14.6667 8.33333 15.4167 8.33333 16.3333C8.33333 17.25 7.58333 18 6.66667 18C5.75 18 5 17.25 5 16.3333Z" fill="#4F4F4F"/>
+                          <mask id="mask0_10_1669" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="11" y="3" width="4" height="15">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3334 6.33333C14.2501 6.33333 15.0001 5.58333 15.0001 4.66667C15.0001 3.75 14.2501 3 13.3334 3C12.4167 3 11.6667 3.75 11.6667 4.66667C11.6667 5.58333 12.4167 6.33333 13.3334 6.33333ZM15.0001 10.5C15.0001 11.4167 14.2501 12.1667 13.3334 12.1667C12.4167 12.1667 11.6667 11.4167 11.6667 10.5C11.6667 9.58333 12.4167 8.83333 13.3334 8.83333C14.2501 8.83333 15.0001 9.58333 15.0001 10.5ZM11.6667 16.3333C11.6667 15.4167 12.4167 14.6667 13.3334 14.6667C14.2501 14.6667 15.0001 15.4167 15.0001 16.3333C15.0001 17.25 14.2501 18 13.3334 18C12.4167 18 11.6667 17.25 11.6667 16.3333Z" fill="white"/>
+                          </mask>
+                          <g mask="url(#mask0_10_1669)">
+                          <rect y="0.5" width="20" height="20" fill="#4F4F4F"/>
+                          </g>
+                          </svg>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- app-task -->
+      </div>
+    </section>
+  </div>
+</div>

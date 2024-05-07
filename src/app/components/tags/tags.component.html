@@ -1,0 +1,8 @@
+<div class="tags_wrap">
+    <span>Тэги</span>
+    <ul class="tags_list">
+      <li *ngFor="let item of tags, let i = index" class="tags_item" [class.active_tl]="item.class" (click)="toggleTags(item)">
+        <div class="tag_dot" style.backgroundColor = {{item.color}}></div>
+        {{item.tagName}}</li>
+    </ul>
+  </div>
